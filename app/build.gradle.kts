@@ -43,6 +43,7 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:designsystem"))
     implementation(project(":core:datastore"))
+    implementation(project(":feature:onboarding"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip_action">Pular</string>
+    <string name="onboarding_offline_badge">100% Offline</string>
+    <string name="onboarding_continue_action">Continuar</string>
+    <string name="onboarding_back_action">Voltar</string>
+    <string name="onboarding_finish_action">Começar</string>
+    <string name="onboarding_page_one_title">Monte sua mala sem esquecer o essencial</string>
+    <string name="onboarding_page_one_description">Conte como será sua viagem e receba uma lista organizada, leve e personalizada do que levar.</string>
+    <string name="onboarding_page_two_title">Uma lista feita para a\nsua viagem</string>
+    <string name="onboarding_page_two_description">O destino, a duração, o clima e seus planos ajudam a criar sugestões mais úteis para você.</string>
+    <string name="onboarding_page_two_personalized_chip">100% Personalizado</string>
+    <string name="onboarding_page_three_title">Sua mala, do seu jeito</string>
+    <string name="onboarding_page_three_description">Marque o que já guardou, adicione seus próprios itens e consulte a lista mesmo sem internet.</string>
+</resources>
