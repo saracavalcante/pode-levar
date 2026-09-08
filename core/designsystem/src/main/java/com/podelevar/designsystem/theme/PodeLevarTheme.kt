@@ -6,17 +6,15 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
-private val LightColors = lightColorScheme()
-private val DarkColors = darkColorScheme()
-
 @Composable
 fun PodeLevarTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
-    val colorScheme = if (darkTheme) DarkColors else LightColors
+    val colorScheme = if (darkTheme) PodeLevarDarkColorScheme else PodeLevarLightColorScheme
     MaterialTheme(
         colorScheme = colorScheme,
+        typography = PodeLevarTypography,
         content = content,
     )
 }
