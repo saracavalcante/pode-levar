@@ -2,7 +2,7 @@ package com.podelevar.designsystem.theme
 
 import androidx.compose.ui.unit.dp
 
-object PodeLevarSpacing {
+object Spacing {
     val none = 0.dp
     val xs = 4.dp
     val sm = 8.dp

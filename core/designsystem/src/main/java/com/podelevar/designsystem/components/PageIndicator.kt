@@ -20,7 +20,11 @@ fun PageIndicator(
     currentPage: Int,
     modifier: Modifier = Modifier,
 ) {
-    Row(modifier = modifier, horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         repeat(pageCount) { index ->
             val isSelected = index == currentPage
             Box(
@@ -28,8 +32,11 @@ fun PageIndicator(
                     .height(8.dp)
                     .width(if (isSelected) 24.dp else 8.dp)
                     .background(
-                        color = if (isSelected) MaterialTheme.colorScheme.primary
-                        else MaterialTheme.colorScheme.surfaceVariant,
+                        color = if (isSelected) {
+                            MaterialTheme.colorScheme.primary
+                        } else {
+                            MaterialTheme.colorScheme.surfaceVariant
+                        },
                         shape = RoundedCornerShape(4.dp),
                     ),
             )
