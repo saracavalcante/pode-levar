@@ -12,7 +12,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.podelevar.app.navigation.PodeLevarDestinations
-import com.podelevar.app.navigation.PodeLevarNavHost
+import com.podelevar.app.navigation.PodeLevarScaffold
 import com.podelevar.app.ui.AppViewModel
 import com.podelevar.app.ui.StartDestination
 import com.podelevar.designsystem.theme.PodeLevarTheme
@@ -34,11 +34,12 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                             .background(MaterialTheme.colorScheme.background),
                     )
-                    else -> PodeLevarNavHost(
+
+                    else -> PodeLevarScaffold(
                         startDestination = when (destination) {
                             StartDestination.Onboarding -> PodeLevarDestinations.ONBOARDING
                             StartDestination.Home -> PodeLevarDestinations.HOME
-                        },
+                        }
                     )
                 }
             }
