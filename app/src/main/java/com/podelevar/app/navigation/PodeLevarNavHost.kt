@@ -9,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.podelevar.home.HomeScreen
 import com.podelevar.onboarding.OnboardingScreen
 
 @Composable
@@ -27,7 +28,7 @@ fun PodeLevarNavHost(
             )
         }
         composable(PodeLevarDestinations.HOME) {
-            Box(modifier = Modifier.fillMaxSize()) { Text("Home (placeholder)") }
+            HomeScreen(onCreateTripClick = { /* TODO: navegar para criação de viagem quando existir */ })
         }
     }
 }

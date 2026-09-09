@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_toolbar_title">Minhas Viagens</string>
+    <string name="home_empty_title">Sua próxima viagem começa aqui</string>
+    <string name="home_empty_description">Crie uma viagem e receba uma checklist personalizada para organizar sua mala.</string>
+    <string name="home_create_first_trip_action">Criar primeira viagem</string>
+</resources>

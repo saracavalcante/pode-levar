@@ -21,6 +21,7 @@ fun PrimaryButton(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    leadingIcon: ImageVector? = null,
     trailingIcon: ImageVector? = null,
 ) {
     Button(
@@ -28,6 +29,10 @@ fun PrimaryButton(
         shape = RoundedCornerShape(12.dp),
         modifier = modifier.height(48.dp)
     ) {
+        leadingIcon?.let {
+            Spacer(Modifier.width(8.dp))
+            Icon(it, contentDescription = null)
+        }
         Text(text)
         trailingIcon?.let {
             Spacer(Modifier.width(8.dp))
