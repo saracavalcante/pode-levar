@@ -1,4 +1,4 @@
-package com.podelevar.designsystem.components
+package com.podelevar.designsystem.components.topBar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -23,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.podelevar.designsystem.R
+import com.podelevar.designsystem.components.TextActionButton
 import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.designsystem.theme.Spacing
 
@@ -75,16 +76,9 @@ fun TopAppBar(
 
 @Composable
 private fun BrandLogo() {
-    Box(
-        modifier = Modifier.minimumInteractiveComponentSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        Image(
-            painter = painterResource(R.drawable.ic_brand_logo),
-            contentDescription = null,
-            modifier = Modifier.size(IconSize.lg)
-        )
-    }
+    TopBarDecorativeIcon(
+        painter = painterResource(R.drawable.ic_brand_logo)
+    )
 }
 
 @Preview

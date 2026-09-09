@@ -1,21 +1,22 @@
 package com.podelevar.home
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
+import androidx.compose.material3.minimumInteractiveComponentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.podelevar.designsystem.components.EmptyState
 import com.podelevar.designsystem.components.PrimaryButton
-import com.podelevar.designsystem.components.TopAppBar
-import com.podelevar.designsystem.components.TopAppBarLeading
+import com.podelevar.designsystem.components.topBar.TopAppBar
+import com.podelevar.designsystem.components.topBar.TopAppBarLeading
+import com.podelevar.designsystem.components.topBar.TopBarDecorativeIcon
 import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.feature.home.R
 import com.podelevar.designsystem.R as RUikit
@@ -30,13 +31,9 @@ fun HomeScreen(
             leading = TopAppBarLeading.BrandIcon,
             title = stringResource(R.string.home_toolbar_title),
             actions = {
-                IconButton(onClick = {}, enabled = false) {
-                    Icon(
-                        painter = painterResource(RUikit.drawable.ic_profile),
-                        contentDescription = null,
-                        modifier = Modifier.size(IconSize.lg),
-                    )
-                }
+                TopBarDecorativeIcon(
+                    painter = painterResource(RUikit.drawable.ic_profile)
+                )
             }
         )
         EmptyState(

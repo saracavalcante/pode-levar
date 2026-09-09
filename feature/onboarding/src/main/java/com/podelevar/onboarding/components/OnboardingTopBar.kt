@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.podelevar.designsystem.components.TextActionButton
-import com.podelevar.designsystem.components.TopAppBar
-import com.podelevar.designsystem.components.TopAppBarLeading
+import com.podelevar.designsystem.components.topBar.TopAppBar
+import com.podelevar.designsystem.components.topBar.TopAppBarLeading
 import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.feature.onboarding.R.string.onboarding_offline_badge
 import com.podelevar.feature.onboarding.R.string.onboarding_skip_action
