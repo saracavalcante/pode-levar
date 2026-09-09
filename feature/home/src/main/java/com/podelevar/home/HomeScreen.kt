@@ -1,13 +1,10 @@
 package com.podelevar.home
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material3.minimumInteractiveComponentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -17,7 +14,6 @@ import com.podelevar.designsystem.components.PrimaryButton
 import com.podelevar.designsystem.components.topBar.TopAppBar
 import com.podelevar.designsystem.components.topBar.TopAppBarLeading
 import com.podelevar.designsystem.components.topBar.TopBarDecorativeIcon
-import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.feature.home.R
 import com.podelevar.designsystem.R as RUikit
 

@@ -17,8 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.podelevar.designsystem.theme.Spacing
 
-private const val IllustrationAspectRatio = 176f / 200f
-private const val IllustrationWidthFraction = 0.45f
+private const val ILLUSTRATION_ASPECT_RATIO = 176f / 200f
+private const val ILLUSTRATION_WIDTH_FRACTION = 0.45f
 
 @Composable
 fun EmptyState(
@@ -39,8 +39,8 @@ fun EmptyState(
             painter = illustration,
             contentDescription = null,
             modifier = Modifier
-                .fillMaxWidth(IllustrationWidthFraction)
-                .aspectRatio(IllustrationAspectRatio)
+                .fillMaxWidth(ILLUSTRATION_WIDTH_FRACTION)
+                .aspectRatio(ILLUSTRATION_ASPECT_RATIO)
         )
         Text(
             title,

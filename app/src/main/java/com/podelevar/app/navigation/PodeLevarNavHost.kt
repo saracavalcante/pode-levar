@@ -33,7 +33,7 @@ fun PodeLevarNavHost(
             )
         }
         composable(PodeLevarDestinations.HOME) {
-            HomeScreen(onCreateTripClick = { /* TODO: navegar para criação de viagem quando existir */ })
+            HomeScreen(onCreateTripClick = { })
         }
         composable(PodeLevarDestinations.SETTINGS) {
             Box(modifier = Modifier.fillMaxSize()) {
