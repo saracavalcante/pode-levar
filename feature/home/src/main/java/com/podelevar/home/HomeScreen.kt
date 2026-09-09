@@ -6,20 +6,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import com.podelevar.designsystem.R as RUikit
 import com.podelevar.designsystem.components.EmptyState
 import com.podelevar.designsystem.components.PrimaryButton
 import com.podelevar.designsystem.components.TopAppBar
 import com.podelevar.designsystem.components.TopAppBarLeading
 import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.feature.home.R
+import com.podelevar.designsystem.R as RUikit
 
 @Composable
 fun HomeScreen(

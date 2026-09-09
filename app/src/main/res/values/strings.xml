@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PodeLevar</string>
+
+    <string name="app_bottom_nav_trips_label">Viagens</string>
+    <string name="app_bottom_nav_settings_label">Configurações</string>
+    <string name="app_settings_placeholder_title">Configurações (placeholder)</string>
 </resources>

@@ -14,10 +14,15 @@ import com.podelevar.onboarding.OnboardingScreen
 
 @Composable
 fun PodeLevarNavHost(
+    modifier: Modifier = Modifier,
     startDestination: String,
-    navController: NavHostController = rememberNavController(),
+    navController: NavHostController = rememberNavController()
 ) {
-    NavHost(navController = navController, startDestination = startDestination) {
+    NavHost(
+        navController = navController,
+        startDestination = startDestination,
+        modifier = modifier
+    ) {
         composable(PodeLevarDestinations.ONBOARDING) {
             OnboardingScreen(
                 onOnboardingFinished = {
@@ -29,6 +34,11 @@ fun PodeLevarNavHost(
         }
         composable(PodeLevarDestinations.HOME) {
             HomeScreen(onCreateTripClick = { /* TODO: navegar para criação de viagem quando existir */ })
+        }
+        composable(PodeLevarDestinations.SETTINGS) {
+            Box(modifier = Modifier.fillMaxSize()) {
+                Text("Configurações")
+            }
         }
     }
 }
