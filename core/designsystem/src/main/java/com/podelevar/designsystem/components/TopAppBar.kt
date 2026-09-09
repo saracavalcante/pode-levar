@@ -19,22 +19,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.podelevar.designsystem.R
 import com.podelevar.designsystem.theme.IconSize
 import com.podelevar.designsystem.theme.Spacing
 
-sealed interface TopBarLeading {
-    data object BrandIcon : TopBarLeading
-    data class BrandLockup(val brandName: String) : TopBarLeading
-    data class Back(val onBackClick: () -> Unit) : TopBarLeading
-}
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopAppBar(
-    leading: TopBarLeading,
+    leading: TopAppBarLeading,
     modifier: Modifier = Modifier,
     title: String? = null,
     actions: @Composable () -> Unit = {},
@@ -52,19 +47,19 @@ fun TopAppBar(
         },
         navigationIcon = {
             when (leading) {
-                TopBarLeading.BrandIcon -> BrandLogo()
-                is TopBarLeading.BrandLockup -> {
+                TopAppBarLeading.BrandIcon -> BrandLogo()
+                is TopAppBarLeading.BrandLockup -> {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         BrandLogo()
                         Text(
-                            leading.brandName,
+                            text = stringResource(R.string.designsystem_brand_name),
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold
                         )
                     }
                 }
 
-                is TopBarLeading.Back -> {
+                is TopAppBarLeading.Back -> {
                     IconButton(onClick = leading.onBackClick) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
@@ -98,7 +93,7 @@ private fun TopAppBarPreview() {
     Column(verticalArrangement = Arrangement.spacedBy(Spacing.sm)) {
         TopAppBar(
             title = "Minhas Viagens",
-            leading = TopBarLeading.BrandIcon,
+            leading = TopAppBarLeading.BrandIcon,
             actions = {
                 IconButton(onClick = {}, enabled = false) {
                     Icon(
@@ -110,15 +105,13 @@ private fun TopAppBarPreview() {
         )
         TopAppBar(
             title = "Minhas viagens",
-            leading = TopBarLeading.Back({})
+            leading = TopAppBarLeading.Back({})
         )
         TopAppBar(
-            leading = TopBarLeading.BrandLockup("Pode Levar"),
+            leading = TopAppBarLeading.BrandLockup,
             actions = {
                 TextActionButton(text = "Pular", onClick = {})
             }
         )
     }
-
 }
-

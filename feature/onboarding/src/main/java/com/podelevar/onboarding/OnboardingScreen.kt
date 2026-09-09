@@ -51,7 +51,6 @@ fun OnboardingScreen(
         if (uiState.isCompleted) onOnboardingFinished()
     }
 
-    // Spec seção 4 (Tela 1): back do sistema volta página; na primeira, encerra normalmente.
     BackHandler(enabled = uiState.currentPage > 0) {
         viewModel.onAction(OnboardingAction.PreviousPage)
     }
